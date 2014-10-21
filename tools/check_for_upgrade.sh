@@ -9,7 +9,7 @@ function _update_zsh_update() {
 }
 
 function _upgrade_zsh() {
-  /bin/sh $HOME/.dotfiles/script/upgrade.sh
+  /bin/sh $HOME/.dotfiles/script/upgrade
   # update the zsh file
   _update_zsh_update
 }
