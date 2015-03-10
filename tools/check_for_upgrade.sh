@@ -11,7 +11,7 @@ function _update_zsh_update() {
 }
 
 function _upgrade_zsh() {
-  env ZSH=$ZSH /bin/sh $ZSH/tools/upgrade.sh
+  /bin/bash $HOME/.dotfiles/script/upgrade
   # update the zsh file
   _update_zsh_update
 }
@@ -41,8 +41,8 @@ then
     then
       _upgrade_zsh
     else
-      echo "[Oh My Zsh] Would you like to check for updates?"
-      echo "Type Y to update oh-my-zsh: \c"
+      echo "Would you like to check for updates (my update script)?"
+      echo "Type Y to update sytem, prelude, oh-my-zsh and dotfiles: \c"
       read line
       if [ "$line" = Y ] || [ "$line" = y ]; then
         _upgrade_zsh
@@ -55,4 +55,3 @@ else
   # create the zsh file
   _update_zsh_update
 fi
-
