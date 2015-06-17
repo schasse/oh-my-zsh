@@ -44,7 +44,7 @@ then
       echo "Would you like to check for updates (my update script)?"
       echo "Type Y to update sytem, prelude, oh-my-zsh and dotfiles: \c"
       read line
-      if [ "$line" = Y ] || [ "$line" = y ]; then
+      if [ "$line" = Y ] || [ "$line" = y ] || [ -z "$line" ]; then
         _upgrade_zsh
       else
         _update_zsh_update
